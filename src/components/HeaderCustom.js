@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity} from "react-native";
 
 const HeaderCustom = ({ title = "Title", colorCustom = "red" }) => {
 
@@ -12,12 +12,18 @@ const HeaderCustom = ({ title = "Title", colorCustom = "red" }) => {
         <View style={style.header}>
             {/* wadah pengaturan dan icon panah kiri */}
             <View style={{flexDirection:"row" , gap:10 , alignItems:"center"}}>
-                <Image style={{ height: 20, width: 20 }} source={require('../assets/arrow-left(2).png')} />
+               <TouchableOpacity>
+                    <Image style={{ height: 20, width: 20 }} source={require('../assets/arrow-left(2).png')} />
+               </TouchableOpacity>
+                
                 <Text style={{ fontSize: 24, fontWeight: 'condensed', color: "white" }}>{title}</Text>
             </View>
 
             {/* icon seacrh */}
-            <Image source={require('../assets/search.png')} />
+            <TouchableOpacity>
+                <Image source={require('../assets/search.png')} />
+            </TouchableOpacity>
+            
         </View>
     )
 }

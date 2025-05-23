@@ -13,10 +13,19 @@ const App = () => {
 			<ScrollView>
 				<View >
 					<TouchableOpacity style={style.container}>
-					<Image style={{height: 50, width: 50, borderRadius: 50, margin: 10}} source={require('./src/assets/senabromo.png')}/>
+						<TouchableOpacity>
+							<Image style={{height: 50, width: 50, borderRadius: 50, margin: 10}} source={require('./src/assets/senabromo.png')}/>
+						</TouchableOpacity>
+					
 					<Text style={style.username} >Sena</Text>
-					<Image style={{height:20, width:20, marginRight:20}} source={require('./src/assets/qrcode-solid(1).png')}/>
-					<Image style={{height:20, width:20}} source={require('./src/assets/plus-circle.png')}/>
+						<TouchableOpacity>
+							<Image style={{height:20, width:20, marginRight:10}} source={require('./src/assets/qrcode-solid(1).png')}/>
+						</TouchableOpacity>
+						<TouchableOpacity>
+							<Image style={{height:20, width:20}} source={require('./src/assets/plus-circle.png')}/>
+						</TouchableOpacity>
+						
+						
 					</TouchableOpacity>
 				</View>
 				<View>
@@ -61,8 +70,7 @@ const App = () => {
 						<Text style={style.teks}>Undang Teman</Text>
 					</TouchableOpacity>
 					
-					<Text style={{color:'gray', fontWeight:'bold', marginTop:20, paddingHorizontal:10,
-        paddingVertical: 10}}>Juga dari Meta</Text>
+					<Text style={{color:'gray', fontWeight:'bold', marginTop:20, paddingHorizontal:10, paddingVertical: 10}}>Juga dari Meta</Text>
 					<TouchableOpacity style={{flexDirection:"row", alignItems:"center"}}>
 						<Image style={style.menuicon} source={require('./src/assets/instagram.png')} />
 						<Text style={style.teks}>Buka Instagram</Text>
@@ -104,15 +112,13 @@ const style = StyleSheet.create({
 
 	username: {
 		color: 'white',
-		alignItems:'row',
-		marginRight: 170,
+		marginRight: 150,
 		marginBottom: 20,
 		fontSize: 16
 	},
 
 	menuicon: {
 		flexDirection:'row',
-		alignItems:'center',
 		marginHorizontal:20,
 		marginVertical: 20,
         justifyContent:"space-between",
@@ -121,7 +127,6 @@ const style = StyleSheet.create({
 	}, 
 	teks: {
 		color: 'white',
-		alignItems:'row',
 		paddingRight: 10,
 		marginBottom: 10,
 		fontSize: 16
